@@ -36,7 +36,7 @@ class DriveApi:
         '''
         utils.log('Upload ' + str(len(files_upload)) + ' file(s)')
         for f in files_upload:
-            self.upload_file(service, ''.join([from_dir_path, f]), 'application/octet-stream', body={'title': f, 'description': 'cam image zip file', 'mimeType': 'application/octet-stream'})
+            self.upload_file(service, ''.join([from_dir_path, f]), 'application/octet-stream', body={'title': f, 'description': 'zip file', 'mimeType': 'application/octet-stream'})
             files_delete.append(f)
             print '*',
         utils.log('Uploaded')
