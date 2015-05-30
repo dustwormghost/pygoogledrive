@@ -41,14 +41,14 @@ def gmail():
     gmailApi.delete_msgs_wrapper(gmail_service, msgIds, 'me')
 
 
-def run_security():
+def loop():
     '''
     Get files from given path
     Zip files from given path
     Upload zip file to google drive
     Delete files from given path
     '''
-    path = '/Users/ftp-user/Public/'
+    path = '/tmp/'
 
     drive_service = OAuthDriveAPI('secret/drive_client_secret.json', 'FULL', False).get_drive_service()
     driveApi = DriveApi()
@@ -81,4 +81,4 @@ def run_security():
         time.sleep(sleep_time_next_upload)
     
 
-run_security()
+loop()
